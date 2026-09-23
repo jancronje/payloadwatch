@@ -37,14 +37,14 @@ Watchdog([
 I run market-data pipelines. Every rule in this library was written the morning
 after something taught it to me.
 
-**A webcam that had gone black.** The service was up, the endpoint returned an
-image, the status page was green. The image was every pixel zero. Nothing alerted,
-because nothing was looking at the pixels. `non_zero` exists because of that.
+**A feed that returned nothing but zeros.** The service was up, the response was
+well-formed, the status page was green. Every value in it was `0.0`. Nothing alerted,
+because nothing was looking at the values themselves. `non_zero` exists because of that.
 
-**A correlation dataset that quietly stopped being fed.** The page rendered
-perfectly. The numbers were internally consistent. The most recent trading day in
-it was ten weeks old, sitting next to a live board that said "Updated 20:23". No
-monitor in the world flags that. `fresh` and `changed` exist because of that.
+**A dataset that quietly stopped being fed.** The page rendered perfectly. The
+numbers were internally consistent and the arithmetic was correct. The most recent
+row in it was months old, on a page that otherwise looked entirely healthy. No
+uptime monitor flags that. `fresh` and `changed` exist because of that.
 
 **A weekend of alerts.** A closed market looks exactly like a dead feed. After one
 Saturday of being woken by a market that was simply shut, you learn to ignore the
